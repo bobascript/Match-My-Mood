@@ -1,5 +1,5 @@
 const Mood = require('./Mood');
-const Song = require('./Song');
+const Song = require('./Playlist');
 const User = require('./User');
 
 
