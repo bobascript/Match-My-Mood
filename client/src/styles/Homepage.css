@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(-45deg, #1db954, #46d177, #314638, #83eed5);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+}
+
+.loginBtn{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: none;
+  background-color: #191414;
+  color: white;
+  cursor: pointer;
+  margin-top: 25%;
+  font-weight: bold;
+}
+
+.loginBtn:hover{
+  opacity: 75%;
+  transform: scale(1.25) perspective(1px)
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
