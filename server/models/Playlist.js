@@ -1,15 +1,16 @@
 const { Schema, model } = require('mongoose');
 
-const songSchema = new Schema(
+const playlistSchema = new Schema(
   {
     name: {
       type: String,
       required: true,
       trim: true
     },
-    artist: {
+    uri: {
       type: String,
-      required: true
+      required: true,
+      trim: true
     },
     moods: [
       {
@@ -20,6 +21,6 @@ const songSchema = new Schema(
   }
 );
 
-const Song = model('Song', songSchema);
+const Playlist = model('Playlist', playlistSchema);
 
-module.exports = Song;
+module.exports = Playlist;
