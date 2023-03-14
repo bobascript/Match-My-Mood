@@ -10,6 +10,6 @@ const moodSchema = new Schema({
   }
 });
 
-const Mood = mongoose.model('Category', moodSchema);
+const Mood = mongoose.model('Mood', moodSchema);
 
 module.exports = Mood;
