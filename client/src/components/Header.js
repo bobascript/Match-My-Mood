@@ -1,14 +1,13 @@
 import React from 'react';
-// Here we import the Header.css file to grant access to some additional classNames
 import '../styles/Header.css';
+import Logo from '../assets/mcubedlogo.png'
 
-// TODO: Create a styles object called "styles"
 
 function Header() {
-  // TODO: Add a style attribute to header and the h1 element
 
   return (
     <header className="header">
+      <input href="#" type="image" src={Logo} className="logo"/>
       <h1>Match My Mood</h1>
     </header>
   );
