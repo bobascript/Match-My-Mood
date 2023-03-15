@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Playlist, Mood } = require('../models');
+const { User, Songs, Mood } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -16,11 +16,11 @@ const resolvers = {
         mood: async () => {
             return Mood.findOne({ name });
         },
-        playlists: async () => {
-            return Playlist.find()
+        songs: async () => {
+            return Songs.find()
         },
-        playlist: async () => {
-            return Playlist.findById(_id)
+        songs: async () => {
+            return Songs.findById(_id)
         }
     },
 

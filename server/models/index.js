@@ -1,6 +1,6 @@
 const Mood = require('./Mood');
-const Song = require('./Playlist');
+const Songs = require('./Songs');
 const User = require('./User');
 
 
-module.exports = { User, Song, Mood };
+module.exports = { User, Songs, Mood };
