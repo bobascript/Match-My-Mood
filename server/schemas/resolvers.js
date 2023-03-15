@@ -47,6 +47,16 @@ const resolvers = {
 
             return { token, user };
         },
+        updateUserMood: async (parent, { userId, name }) => {
+            return await User.findOneAndUpdate(
+                {_id: userId},
+                { $addToSet: { moods: name }},
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            )
+        }
     },
 };
 
