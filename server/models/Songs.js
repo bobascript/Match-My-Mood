@@ -1,13 +1,13 @@
 const { Schema, model } = require('mongoose');
 
-const playlistSchema = new Schema(
+const SongsSchema = new Schema(
   {
     name: {
       type: String,
       required: true,
       trim: true
     },
-    uri: {
+    code: {
       type: String,
       required: true,
       trim: true
@@ -21,6 +21,6 @@ const playlistSchema = new Schema(
   }
 );
 
-const Playlist = model('Playlist', playlistSchema);
+const Playlist = model('Songs', SongsSchema);
 
 module.exports = Playlist;

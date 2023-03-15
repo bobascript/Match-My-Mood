@@ -13,10 +13,10 @@ const typeDefs = gql`
     name: String
   }
 
-  type Playlist {
+  type Songs {
     _id: ID
     name: String
-    uri: String
+    code: String
     moods: [Mood]
   }
 
@@ -27,7 +27,7 @@ const typeDefs = gql`
 
   type Query {
     moods: [Mood]
-    playlist: [Playlist]
+    songs: [Songs]
     user: User
   }
 
