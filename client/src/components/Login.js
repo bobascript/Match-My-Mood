@@ -1,39 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match My Mood</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Satisfy&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<link rel="stylesheet" href="./css/style.css" />
-  </head>
+import React from 'react';
+import '../styles/Login.css';
+import Header from '../components/Header.js'
 
-  <body>
+function Login() {
+    return (
+        <div>
+        <div class="d-flex flex-column justify-content-center w-100 h-100"/>
+            <Header/>
+          <div style={{display:"flex",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
+            <button className="loginBtn" >Log in /<br/>Sign up!</button>
+          </div>
+        </div>
+        </div>  
+       
    
-    <!-- Login -->
-    <section> 
         <div class="row ">
             <div class="col-med-6 mb-3 mb-sm-0 ">
               <div class="card">
                 <div class="card-body ">
                     <form>
                         <label class="label">Music User Login:</label>
-                        <br>
+                        <br/>
                         <div class="row mb-3">
                           <label for="inputUsername3" class="col-sm-2 col-form-label">Username</label>
                           <div class="col-sm-10">
-                            <input type="type" class="form-control" id="inputUsername3">
+                            <input type="type" class="form-control" id="inputUsername3"/>
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                           <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3">
+                            <input type="password" class="form-control" id="inputPassword3"/>
                           </div>
                         </div>
                         
@@ -42,35 +39,35 @@
                 </div>
               </div>
             </div>
-        </section>
+       
+
+        <br/>
+        <br/>
     
-        <br>
-    <br>
+      
     
-        <!-- Sign up -->
-        <section> 
-            <div class="row">
+            <div class="row"/>
                 <div class="col-med-6 mb-3 mb-sm-0">
                   <div class="card">
                     <div class="card-body">
                         <form>
                             <label class="label">Sign up for New Music Users:</label>
-                            <br>
+                            <br/>
                             <div class="row mb-3">
                               <label for="inputUsername3" class="col-sm-2 col-form-label">Username</label>
                               <div class="col-sm-10">
-                                <input type="type" class="form-control" id="inputUsername3">
+                                <input type="type" class="form-control" id="inputUsername3"/>
                               </div>
                             </div>
                             <div class="row mb-3">
                               <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                               <div class="col-sm-10">
-                                <input type="type" class="form-control" id="inputUsername3">
+                                <input type="type" class="form-control" id="inputUsername3"/>
                               </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck"/>
                                   <label class="form-check-label" for="gridCheck">
                                     I agree
                                   </label>
@@ -81,10 +78,9 @@
                     </div>
                   </div>
                 </div>
-            </section>
+            </div>
+       
+    );
+}
 
-   
-
-</body>
-
-<script type="text/javascript" src="./js/script.js"></script>
+export default Login;
