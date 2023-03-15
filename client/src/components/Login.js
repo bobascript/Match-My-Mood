@@ -10,9 +10,7 @@ function Login() {
           <div style={{display:"flex",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
             <button className="loginBtn" >Log in /<br/>Sign up!</button>
           </div>
-        </div>
-       
-   
+          
         <div class="row ">
             <div class="col-med-6 mb-3 mb-sm-0 ">
               <div class="card">
@@ -78,8 +76,7 @@ function Login() {
                     </div>
                   </div>
                 </div>
-             </div>
-        </div>
+
     );
 }
 
