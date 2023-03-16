@@ -16,7 +16,7 @@ const typeDefs = gql`
   type Songs {
     _id: ID
     name: String
-    code: String
+    url: String
     moods: [Mood]
   }
 
