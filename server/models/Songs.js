@@ -21,6 +21,6 @@ const SongsSchema = new Schema(
   }
 );
 
-const Playlist = model('Songs', SongsSchema);
+const Songs = model('Songs', SongsSchema);
 
-module.exports = Playlist;
+module.exports = Songs;
