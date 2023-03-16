@@ -18,7 +18,7 @@ db.once('open', async () => {
   const songs = await Songs.insertMany([
     {
       name: 'Living My Best Life',
-      code: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0R7EWhquaAICmyE5MZqt3q?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+      url: "https://open.spotify.com/embed/track/0R7EWhquaAICmyE5MZqt3q?utm_source=generator",
       moods: moods[0]._id,
     },
 
