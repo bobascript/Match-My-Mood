@@ -47,6 +47,12 @@ const resolvers = {
 
             return { token, user };
         },
+        addMood: async (parent, { name }) => {
+            return Mood.create({ name });
+        },
+        addSong: async (parent, { name, url }) => {
+            return Songs.create({ name, url });
+        },
         updateUserMood: async (parent, { userId, name }) => {
             return await User.findOneAndUpdate(
                 {_id: userId},
