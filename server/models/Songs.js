@@ -7,7 +7,7 @@ const SongsSchema = new Schema(
       required: true,
       trim: true
     },
-    code: {
+    url: {
       type: String,
       required: true,
       trim: true
