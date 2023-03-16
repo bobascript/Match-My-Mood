@@ -27,14 +27,18 @@ const typeDefs = gql`
 
   type Query {
     moods: [Mood]
+    mood: [Mood]
     songs: [Songs]
+    song: [Songs]
     user: User
+    users: User
   }
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     updateUser(name: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
+    updateUserMood(name: String): User
     
   }
 `;
