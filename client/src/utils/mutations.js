@@ -36,11 +36,18 @@ export const ADD_MOOD = gql `
   ) {
     addMood(
       name: $name
-    ) {
-      token
-      user {
-        _id
-      }
-    }
+    ) 
+  }
+`;
+
+export const ADD_SONG = gql`
+  mutation addSong(
+    $name: String!
+    $url: String!
+  ) {
+    addSong(
+      name: $name
+      url: $url
+    ) 
   }
 `;
