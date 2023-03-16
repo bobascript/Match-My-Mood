@@ -5,15 +5,17 @@ import logo from './logo.svg';
 import Homepage from './components/Homepage.js';
 import Header from './components/Header';
 import Login from './components/Login';
+import Player from './components/Player.js'
 
 
 
 
 function App() {
   return (
-    <Homepage/>
-
-
+    <div>
+      <Header/>
+      <Player/>
+    </div>
 
 
 
