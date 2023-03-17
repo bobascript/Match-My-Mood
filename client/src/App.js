@@ -6,6 +6,7 @@ import Homepage from './components/Homepage.js';
 import Header from './components/Header';
 import Login from './components/Login';
 import Player from './components/Player.js'
+import Footer from './components/Footer.js';
 
 
 
@@ -15,6 +16,7 @@ function App() {
     <div>
       <Header/>
       <Player/>
+      <Footer/>
     </div>
 
 
