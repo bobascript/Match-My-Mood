@@ -21,6 +21,16 @@ db.once('open', async () => {
       url: "https://open.spotify.com/embed/track/0R7EWhquaAICmyE5MZqt3q?utm_source=generator",
       moods: [moods[0]._id],
     },
+    {
+      name: 'My Girls',
+      url: "https://open.spotify.com/embed/track/2gE0khQ948RYQOeTgCUL2a?utm_source=generator",
+      moods: [moods[0]._id],
+    },
+    {
+      name: 'Wouldn\'t It Be Nice',
+      url: "https://open.spotify.com/embed/track/2Gy7qnDwt8Z3MNxqat4CsK?utm_source=generator",
+      moods: [moods[0]._id],
+    },
 
   ]);
 
