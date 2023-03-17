@@ -7,7 +7,7 @@ const SongsSchema = new Schema(
       required: true,
       trim: true
     },
-    code: {
+    url: {
       type: String,
       required: true,
       trim: true
@@ -21,6 +21,6 @@ const SongsSchema = new Schema(
   }
 );
 
-const Playlist = model('Songs', SongsSchema);
+const Songs = model('Songs', SongsSchema);
 
-module.exports = Playlist;
+module.exports = Songs;

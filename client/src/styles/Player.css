@@ -1,0 +1,75 @@
+.playerPage{
+    display: flex;
+}
+
+.player{
+    margin-right: 10%;
+    margin-top: 4%;
+    display:flex;
+    border: 4px solid black;
+    flex-direction: column;
+    width: 20%;
+    height: 500px;
+    border-radius:20px;
+    background-color: black;
+    justify-self: right;
+}
+
+@media (max-width: 600px){
+    .player{
+        flex-direction: column;
+        width: 100%;
+        margin: 0%;
+        margin-top:3%;
+        position: absolute;
+    }
+}
+
+.spotify{
+    border-radius: 17px;
+    width: 100%;
+    height: 352px
+}
+
+.btnBox{
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.btnBox button{
+    margin: 10px;
+    border: none;
+    border-radius:50%;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+}
+
+.btnBox button:hover{
+    opacity: 55%;
+  transform: scale(1.05) perspective(1px)
+}
+
+.moodBox{
+    border: 4px solid black;
+    border-radius:20px;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 4%;
+    padding: 5px;
+    width: 20%;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .moodBox{
+        flex-direction: column;
+        width: 100%;
+        margin: 0%;
+        margin-top:175%;
+    }
+}

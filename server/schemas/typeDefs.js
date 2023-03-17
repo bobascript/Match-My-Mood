@@ -16,7 +16,7 @@ const typeDefs = gql`
   type Songs {
     _id: ID
     name: String
-    code: String
+    url: String
     moods: [Mood]
   }
 
@@ -27,16 +27,20 @@ const typeDefs = gql`
 
   type Query {
     moods: [Mood]
+    mood: [Mood]
     songs: [Songs]
-    user: User
+    song: [Songs]
+    user: [User]
+    users: [User]
   }
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     updateUser(name: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
+    updateUserMood(name: String): User
     
   }
 `;
 
-module.export = typeDefs;
+module.exports = typeDefs;
