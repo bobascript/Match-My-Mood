@@ -1,30 +1,16 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
-      _id
-      username
-      email
-      moods {
-        _id
-        name
-      }
-    }
-  }
-`;
-
-export const QUERY_SONG = gql`
-  query song($name: String!) {
-    song(name: $name) {
+  query User($userName: String!) {
+  user(userName: $userName) {
+    _id
+    userName
+    moods {
       _id
       name
-      moods {
-        _id
-        name
-      }
     }
   }
+}
 `;
 
 export const QUERY_MOOD = gql`
@@ -35,3 +21,23 @@ export const QUERY_MOOD = gql`
             }
         }
     `
+//pull all moods
+export const QUERY_MOODS = gql`
+  {
+    moods {
+    _id
+    name
+  }
+}
+`;
+
+//pull a random song based on mood
+export const QUERY_SONG = gql`
+  {
+    song(mood: "Happy") {
+    title
+    artist
+    mood
+  }
+  }
+`;

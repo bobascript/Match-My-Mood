@@ -20,7 +20,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-  moods: [Mood.schema]
+  moods: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Mood'
+    }
+  ]
 });
 
 // set up pre-save middleware to create password
