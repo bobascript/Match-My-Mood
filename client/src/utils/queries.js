@@ -27,6 +27,7 @@ export const QUERY_MOODS = gql`
     moods {
     _id
     name
+    description
   }
 }
 `;

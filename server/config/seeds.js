@@ -43,6 +43,47 @@ db.once('open', async () => {
       url: "https://open.spotify.com/embed/track/2Gy7qnDwt8Z3MNxqat4CsK?utm_source=generator",
       moods: [moods[0]._id],
     },
+    {
+      name: 'Beautiful Day',
+      url: "https://open.spotify.com/embed/track/1VuBmEauSZywQVtqbxNqka?utm_source=generator",
+      moods: [moods[0]._id],
+    },
+    {
+      name: 'Closer to You',
+      url: "https://open.spotify.com/embed/track/5agTqEuMNi0RXgASfpgUUD?utm_source=generator",
+      moods: [moods[0]._id],
+    },
+    {
+      name: 'Here Comes The Sun',
+      url: "https://open.spotify.com/embed/track/6dGnYIeXmHdcikdzNNDMm2?utm_source=generator",
+      moods: [moods[0]._id],
+    },
+    {
+      name: 'Pink Moon',
+      url: "https://open.spotify.com/embed/track/4KROoGIaPaR1pBHPnR3bwC?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+    {
+      name: 'Going to California',
+      url: "https://open.spotify.com/embed/track/1YVc2NJBwOtAebQiSUbt5T?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+    {
+      name: 'Nocturne No. 2 in E-Flat Major, Op. 9 No. 2',
+      url: "https://open.spotify.com/embed/track/1VNvsvEsUpuUCbHpVop1vo?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+    {
+      name: 'Thinking out Loud',
+      url: "https://open.spotify.com/embed/track/1Slwb6dOYkBlWal1PGtnNg?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+    {
+      name: 'Everything I Wanted',
+      url: "https://open.spotify.com/embed/track/3ZCTVFBt2Brf31RLEnCkWJ?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+    
 
   ]);
 
