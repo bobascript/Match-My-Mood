@@ -23,15 +23,10 @@ const resolvers = {
 
             const match = mood ? { mood } : {};
 
-       /*      const pipeline = [
-                { $match: match },
-                { $sample: { size: 1 } }
-            ]; */
-
-            const randomSong = await Songs.findOne({moods: mood}).populate('moods');
+            const allSongs = await Songs.find({moods: mood}).populate('moods');
+            const randomNumber = Math.floor(Math.random() * allSongs.length);
+            const randomSong = allSongs[randomNumber];
             return randomSong;
-            //const params = mood ? { mood } : {};
-            //return Song.find(params).sort({ createdAt: -1 });
         }
     },
 
