@@ -5,10 +5,22 @@ db.once('open', async () => {
   await Mood.deleteMany();
 
   const moods = await Mood.insertMany([
-    { name: 'Happy' },
-    { name: 'Sad' },
-    { name: 'Angry' },
-    { name: 'Calm' },
+    {
+      name: 'Happy', 
+      description: 'A positive emotional state characterized by feelings of joy, contentment, and satisfaction. Songs may include upbeat, energetic, and uplifting tunes with catchy melodies and positive lyrics.'
+    },
+    { 
+      name: 'Sad',
+      description: 'A negative emotional state characterized by feelings of sorrow, grief, or melancholy. Songs may include slower, more subdued, and contemplative tunes with somber melodies and lyrics that explore themes of loss, heartbreak, or loneliness.' 
+    },
+    { 
+      name: 'Angry',
+      description: 'A negative emotional state characterized by feelings of frustration, annoyance, or rage. Songs may include loud, fast-paced, and intense tunes with heavy beats and aggressive lyrics.' 
+    },
+    { 
+      name: 'Calm',
+      description: 'A positive emotional state characterized by feelings of peace, relaxation, and tranquility. Songs may include soothing, gentle, and melodic tunes with soft instrumentation and minimal vocals.'
+    },
   ]);
   console.log(moods);
   console.log('moods seeded');
