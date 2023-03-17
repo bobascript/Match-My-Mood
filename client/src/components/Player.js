@@ -17,7 +17,6 @@ function Player(){
                 <button className='rerollBtn'><i class="fa-solid fa-shuffle fa-2x"></i></button>  
             </container>
         </container>
-
      </div>   
     )
 }
