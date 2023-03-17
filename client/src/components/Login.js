@@ -1,16 +1,10 @@
 import React from 'react';
 import '../styles/Login.css';
+// import Header from '../components/Header.js';
 
 function Login() {
     return (
-        <div>
-               
-    <div class="d-flex flex-column justify-content-center w-100 h-100">
-        <Header/>
-      <div style={{display:"flex",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
-      </div>
-    </div>
-
+    <div>
 
     <div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"03%", margin:"0%", alignItems:"center"}}></div>
     <div class="row ">
