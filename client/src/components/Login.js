@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Login.css';
-import Header from '../components/Header.js'
 
 function Login() {
     return (
@@ -74,6 +73,7 @@ function Login() {
     <br/>
 
 </div>
+
 
     );
 }

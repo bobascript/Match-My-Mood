@@ -7,19 +7,19 @@ const resolvers = {
         users: async () => {
             return User.find().populate('moods');
         },
-        user: async (parent, { username }) => {
-            return User.findOne({ username }).populate('moods');
+        user: async (parent, { userName }) => {
+            return User.findOne({ userName }).populate('moods');
         },
         moods: async () => {
             return Mood.find();
         },
-        mood: async () => {
+        mood: async (parent, { name }) => {
             return Mood.findOne({ name });
         },
         songs: async () => {
             return Songs.find()
         },
-        songs: async () => {
+        song: async () => {
             return Songs.findById(_id)
         }
     },
@@ -46,6 +46,12 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
+        },
+        addMood: async (parent, { name }) => {
+            return Mood.create({ name });
+        },
+        addSong: async (parent, { name, url }) => {
+            return Songs.create({ name, url });
         },
         updateUserMood: async (parent, { userId, name }) => {
             return await User.findOneAndUpdate(

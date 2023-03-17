@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Moods.css';
-import Header from '../components/Header.js';
 import Happy from '../assets/happypic.png';
 import Calm from '../assets/calmpic.png';
 import Sad from '../assets/sadpic.png';
