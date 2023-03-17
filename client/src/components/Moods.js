@@ -7,57 +7,54 @@ import Angry from '../assets/angpic.png';
 
 function Moods() {
     return (
-        <div>
-        <div class="d-flex flex-column justify-content-center w-100 h-100">
-          <div style={{display:"flex",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
-            <button className="loginBtn" >Log in /<br/>Sign up!</button>
-          </div>
-        </div>
+     <div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+     <br/>
+
+     <div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"05%",   alignItems:"center"}}>
+     <div class="row row-cols-1 row-cols-sm-2 g-5 text-center ">
+  
         <div class="col">
-          <div class="card">
+          <div class="card text-bg-dark mb-3 w-80">
             <img alt="happypic" src={Happy} class="card-img-top" id="happy-image"/>
             <div class="card-body">
-              <b> <h5 class="card-title">Happy</h5></b>
-              <p class="card-text"></p>
+            {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
+          <button type="button" class="btn btn-outline-success btn-lg btn-block"><h1><b>HAPPY</b></h1></button>
+              <p class="card-text font-weight-bold"></p>
             </div>
           </div>
-          </div> 
         </div> 
-
         <div class="col">
-         <div class="card">
+         <div class="card text-bg-dark mb-3 w-80">
           <img alt="calmpic" src={Calm} class="card-img-top" id="calm-image"/>
           <div class="card-body">
-          <b><h5 class="card-title">Calm</h5></b>
+          <button type="button" class="btn btn-outline-success btn-lg btn-block"><h1><b>CALM</b></h1></button>
           <p class="card-text"></p>
          </div>
-         </div>
+        </div>
        </div>   
-           
-
-        <div class="col">
-         <div class="card">
+       <div class="col">
+         <div class="card text-bg-dark mb-3 w-80">
           <img alt="sadpic" src={Sad} class="card-img-top" id="sad-image"/>
           <div class="card-body">
-          <b><h5 class="card-title">Sad</h5></b>
+          <button type="button" class="btn btn-outline-success btn-lg btn-block"><h1><b>SAD</b></h1></button>
           <p class="card-text"></p>
         </div>
        </div>
       </div> 
-
-
-        <div class="col">
-         <div class="card">
+      <div class="col">
+        <div class="card text-bg-dark mb-3 w-80">
          <img alt="angpic" src={Angry} class="card-img-top" id="ang-image"/>
          <div class="card-body">
-         <b><h5 class="card-title">Angry</h5></b>
-         <p class="card-text"></p>
+         <button type="button" class="btn btn-outline-success btn-lg btn-block"><h1><b>ANGRY</b></h1></button>
+          <p class="card-text"></p>
         </div>
        </div>
       </div>   
     </div> 
+
+   </div>
+   </div>
       
          
     );
