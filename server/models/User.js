@@ -25,6 +25,12 @@ const userSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Mood'
     }
+  ],
+  songs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Songs'
+    }
   ]
 });
 

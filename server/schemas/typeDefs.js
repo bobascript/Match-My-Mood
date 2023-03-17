@@ -6,11 +6,13 @@ const typeDefs = gql`
     userName: String
     email: String
     moods: [Mood]
+    songs: [Songs]
   }
 
   type Mood {
     _id: ID
     name: String
+    description: String
   }
 
   type Songs {
