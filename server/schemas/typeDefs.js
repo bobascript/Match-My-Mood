@@ -27,10 +27,10 @@ const typeDefs = gql`
 
   type Query {
     moods: [Mood]
-    mood: [Mood]
+    mood(moodId: ID!): [Mood]
     songs: [Songs]
-    song: [Songs]
-    user: [User]
+    song(mood: ID!): Songs
+    user(userName: String!): User
     users: [User]
   }
 
@@ -39,7 +39,8 @@ const typeDefs = gql`
     updateUser(name: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     updateUserMood(name: String): User
-    
+    addMood(name: String!): Mood
+    addSong(name: String!, url: String!): Songs
   }
 `;
 

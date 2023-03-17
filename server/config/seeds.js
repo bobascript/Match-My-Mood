@@ -10,7 +10,7 @@ db.once('open', async () => {
     { name: 'Angry' },
     { name: 'Calm' },
   ]);
-
+  console.log(moods);
   console.log('moods seeded');
 
   await Songs.deleteMany();
@@ -19,7 +19,7 @@ db.once('open', async () => {
     {
       name: 'Living My Best Life',
       url: "https://open.spotify.com/embed/track/0R7EWhquaAICmyE5MZqt3q?utm_source=generator",
-      moods: moods[0]._id,
+      moods: [moods[0]._id],
     },
 
   ]);
