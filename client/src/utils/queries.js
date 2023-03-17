@@ -33,11 +33,15 @@ export const QUERY_MOODS = gql`
 
 //pull a random song based on mood
 export const QUERY_SONG = gql`
-  {
-    song(mood: "Happy") {
-    title
-    artist
-    mood
+  query Song($mood: ID!) {
+  song(mood: $mood) {
+    _id
+    name
+    url
+    moods {
+      _id
+      name
+    }
   }
-  }
+}
 `;
