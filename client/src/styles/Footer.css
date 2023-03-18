@@ -1,0 +1,38 @@
+
+.footer{
+    background: #191414;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.footer ul{
+    list-style: none;
+    align-self: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    width: 20%;
+    padding: 220px;
+}
+
+.footer button{
+    background: none;
+    border: none;
+    color: white;
+    margin-top: 35px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: white;
+}

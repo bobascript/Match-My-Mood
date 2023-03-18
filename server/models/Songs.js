@@ -15,7 +15,7 @@ const SongsSchema = new Schema(
     moods: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Moods'
+        ref: 'Mood'
       }
     ]
   }

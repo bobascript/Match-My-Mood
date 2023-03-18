@@ -19,8 +19,14 @@ const resolvers = {
         songs: async () => {
             return Songs.find()
         },
-        song: async () => {
-            return Songs.findById(_id)
+        song: async (parent, { mood }) => {
+
+            const match = mood ? { mood } : {};
+
+            const allSongs = await Songs.find({moods: mood}).populate('moods');
+            const randomNumber = Math.floor(Math.random() * allSongs.length);
+            const randomSong = allSongs[randomNumber];
+            return randomSong;
         }
     },
 
@@ -55,8 +61,8 @@ const resolvers = {
         },
         updateUserMood: async (parent, { userId, name }) => {
             return await User.findOneAndUpdate(
-                {_id: userId},
-                { $addToSet: { moods: name }},
+                { _id: userId },
+                { $addToSet: { moods: name } },
                 {
                     new: true,
                     runValidators: true,
