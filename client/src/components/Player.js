@@ -1,7 +1,23 @@
 import React from 'react';
 import "../styles/Player.css"
 
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_SONG } from '../utils/queries';
+
+
 function Player(){
+
+    const { moodId } = useParams();
+    const { loading, data } = useQuery(QUERY_SONG, {
+        variables: {moodId: moodId}
+    });
+
+    const song = data?.song || {};
+
+    if (loading) {
+        return <div>Loading...</div>;
+      }
     return (
      <div className="playerPage">
         <container className="moodBox">
