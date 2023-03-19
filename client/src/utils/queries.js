@@ -23,7 +23,7 @@ export const QUERY_MOOD = gql`
     `
 //pull all moods
 export const QUERY_MOODS = gql`
-  {
+  query getMoods {
     moods {
     _id
     name
