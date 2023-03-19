@@ -14,8 +14,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
 import Homepage from './components/Homepage.js';
-import Header from './components/Header';
-import Login from './components/Login';
+import Header from './components/Header.js';
+// import Navbar from './components/Navbar.js';
+import Login from './components/Login.js';
 import Player from './components/Player.js'
 import Footer from './components/Footer.js';
 
@@ -47,6 +48,13 @@ const client = new ApolloClient({
 
 function App() {
   return (
+
+    <div>
+      <Header/>
+      <Player/>
+      <Footer/>
+    </div>
+
     <ApolloProvider client={client}>
       <Router>
         <div>
@@ -63,8 +71,6 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
-
-
 
 
   );
