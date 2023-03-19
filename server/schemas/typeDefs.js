@@ -29,7 +29,7 @@ const typeDefs = gql`
 
   type Query {
     moods: [Mood]
-    mood(moodId: ID!): [Mood]
+    mood(moodId: ID!): Mood
     songs: [Songs]
     song(mood: ID!): Songs
     user(userName: String!): User

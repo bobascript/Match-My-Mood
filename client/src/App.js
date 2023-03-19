@@ -62,7 +62,7 @@ function App() {
                 element={<Homepage />}
               />
               <Route 
-                path="/player"
+                path="/player/:moodId"
                 element={<Player />}
               />
               <Route 

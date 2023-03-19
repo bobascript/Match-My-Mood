@@ -14,12 +14,13 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_MOOD = gql`
-    query mood($name: String!) {
-        mood(name: $name) {
-            _id
-            name
-            }
-        }
+    query Mood($moodId: ID!) {
+    mood(moodId: $moodId) {
+    _id
+    name
+    description
+  }
+}
     `
 //pull all moods
 export const QUERY_MOODS = gql`

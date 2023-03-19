@@ -13,8 +13,8 @@ const resolvers = {
         moods: async () => {
             return Mood.find();
         },
-        mood: async (parent, { name }) => {
-            return Mood.findOne({ name });
+        mood: async (parent, { moodId }) => {
+            return Mood.findOne({ _id: moodId });
         },
         songs: async () => {
             return Songs.find()
