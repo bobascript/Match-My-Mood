@@ -12,8 +12,10 @@ function Player(){
     const { loading, data } = useQuery(QUERY_SONG, {
         variables: {moodId: moodId}
     });
+   
 
     const song = data?.song || {};
+    console.log(song.name);
 
     if (loading) {
         return <div>Loading...</div>;
