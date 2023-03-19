@@ -5,8 +5,16 @@ import Happy from '../assets/happypic.png';
 import Calm from '../assets/calmpic.png';
 import Sad from '../assets/sadpic.png';
 import Angry from '../assets/angpic.png';
+import { useQuery } from '@apollo/client';
+import { QUERY_MOODS } from '../utils/queries';
+import { Link } from 'react-router-dom';
 
 function Moods() {
+
+  const { loading, data } = useQuery(QUERY_MOODS);
+  const moods = data?.moods || [];
+  //occasionally doesn't return data for moods
+
     return (
     <div>
 
@@ -18,7 +26,10 @@ function Moods() {
             <img alt="happypic" src={Happy} class="card-img-top" id="happy-image"/>
             <div class="card-body">
             {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
-          <button type="button" class="btn btn-outline-success btn-lg btn-block"><h1><b>HAPPY</b></h1></button>
+            <Link
+           className="btn btn-outline-success btn-lg btn-block" to={`/player/${moods}`}> {/* need it to be /player/${mood._id} */}
+            <h1><b>HAPPY</b></h1>{/* this could be ${mood.name} */}
+            </Link>
               <p class="card-text font-weight-bold"></p>
             </div>
           </div>

@@ -19,6 +19,7 @@ import Header from './components/Header.js';
 import Login from './components/Login.js';
 import Player from './components/Player.js'
 import Footer from './components/Footer.js';
+import Moods from './components/Moods';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -49,11 +50,6 @@ const client = new ApolloClient({
 function App() {
   return (
 
-    <div>
-      <Header/>
-      <Player/>
-      <Footer/>
-    </div>
 
     <ApolloProvider client={client}>
       <Router>
@@ -64,6 +60,14 @@ function App() {
               <Route 
                 path="/"
                 element={<Homepage />}
+              />
+              <Route 
+                path="/player"
+                element={<Player />}
+              />
+              <Route 
+                path="/moods"
+                element={<Moods />}
               />
             </Routes>
           </div>
