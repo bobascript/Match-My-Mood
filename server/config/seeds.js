@@ -148,6 +148,9 @@ db.once('open', async () => {
     moods: [
       moods[0], moods[1],
     ],
+    songs: [
+      songs[0], songs[1]
+    ]
   });
   console.log('users seeded');
 
