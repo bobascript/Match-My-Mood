@@ -8,9 +8,9 @@ import { QUERY_SONG } from '../utils/queries';
 
 function Player(){
 
-    const { moodId } = useParams();
+    const { mood } = useParams();
     const { loading, data } = useQuery(QUERY_SONG, {
-        variables: {moodId: moodId}
+        variables: {mood: mood}
     });
    
 
