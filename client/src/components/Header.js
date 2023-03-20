@@ -9,7 +9,7 @@ function Header() {
   return (
     <div class="container-fluid-xxl">
     <header className="header">
-      <input href="#" type="image" src={Logo} className="logo"/>
+      <Link to={`/`}><input href="#" type="image" src={Logo} className="logo"/></Link>
       <h1>Match My Mood</h1>
 
       <div>

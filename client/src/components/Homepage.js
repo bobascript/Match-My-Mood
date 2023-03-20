@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Homepage.css';
 import Header from '../components/Header.js';
-import Player from './Player';
+import { Link } from 'react-router-dom';
 // import Happy from '../assets/happypic.png';
 // import Calm from '../assets/calmpic.png';
 // import Sad from '../assets/sadpic.png';
@@ -13,9 +13,9 @@ function Homepage(){
       <div>
 
       <div class="d-flex flex-column justify-content-center w-100 h-100">
-          <Player/>
-        <div style={{display:"flex",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
-        </div>
+        <Link to={`/login`}><div style={{display:"flex",textDecoration:"none",flex:"column",justifyContent:"center",width:"100%",height:"100%"}}>
+    <button className="loginBtn">Log in /<br/>Sign up!</button>
+    </div></Link>
       </div>
 
       </div>
