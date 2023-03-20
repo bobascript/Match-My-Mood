@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4b5d888.css",
-    "main.js": "/static/js/main.3c15235b.js",
-    "static/js/522.628bd4ae.chunk.js": "/static/js/522.628bd4ae.chunk.js",
+    "main.css": "/static/css/main.79afe238.css",
+    "main.js": "/static/js/main.f72eeb1f.js",
+    "static/media/calmpic.png": "/static/media/calmpic.6d1982338414c2cf191a.png",
+    "static/media/sadpic.png": "/static/media/sadpic.d3e87e718fdf82d63132.png",
+    "static/media/angpic.png": "/static/media/angpic.29af98a462eab8ad4079.png",
+    "static/media/happypic.png": "/static/media/happypic.30400eed3d7c927917ca.png",
     "static/media/mcubedlogo.png": "/static/media/mcubedlogo.f5a47e1dbdbdfcbe01eb.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.a4b5d888.css.map": "/static/css/main.a4b5d888.css.map",
-    "main.3c15235b.js.map": "/static/js/main.3c15235b.js.map",
-    "522.628bd4ae.chunk.js.map": "/static/js/522.628bd4ae.chunk.js.map"
+    "main.79afe238.css.map": "/static/css/main.79afe238.css.map",
+    "main.f72eeb1f.js.map": "/static/js/main.f72eeb1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4b5d888.css",
-    "static/js/main.3c15235b.js"
+    "static/css/main.79afe238.css",
+    "static/js/main.f72eeb1f.js"
   ]
 }

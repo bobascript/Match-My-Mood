@@ -13,8 +13,8 @@ const resolvers = {
         moods: async () => {
             return Mood.find();
         },
-        mood: async (parent, { name }) => {
-            return Mood.findOne({ name });
+        mood: async (parent, { moodId }) => {
+            return Mood.findOne({ _id: moodId });
         },
         songs: async () => {
             return Songs.find()
@@ -31,16 +31,16 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (parent, { username, email, password }) => {
-            const user = await User.create({ username, email, password });
+        addUser: async (parent, { userName, email, password }) => {
+            const user = await User.create({ userName, email, password });
             const token = signToken(user);
             return { token, user };
         },
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+        login: async (parent, { userName, password }) => {
+            const user = await User.findOne({ userName });
 
             if (!user) {
-                throw new AuthenticationError('No user found with this email address');
+                throw new AuthenticationError('No user found with this user name!');
             }
 
             const correctPw = await user.isCorrectPassword(password);

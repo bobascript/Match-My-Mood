@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const LOGIN = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
+  mutation login($userName: String!, $password: String!) {
+    login(userName: $userName, password: $password) {
       token
       user {
         _id
@@ -36,7 +36,10 @@ export const ADD_MOOD = gql `
   ) {
     addMood(
       name: $name
-    ) 
+    ) {
+      id
+      name
+    }
   }
 `;
 
@@ -48,6 +51,10 @@ export const ADD_SONG = gql`
     addSong(
       name: $name
       url: $url
-    ) 
+    ) {
+      id
+      name
+      url
+    }
   }
 `;
