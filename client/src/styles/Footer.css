@@ -19,7 +19,7 @@
 .footer ul li {
     display: inline-block;
     width: 20%;
-    padding: 220px;
+    padding-left: 220px;
 }
 
 .footer button{

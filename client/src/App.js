@@ -57,10 +57,14 @@ function App() {
           <Header />
           <div>
             <Routes>
-              <Route 
+            <Route 
                 path="/"
                 element={<Homepage />}
               />
+              <Route
+                path="/login"
+                element={<Login />}
+                />
               <Route 
                 path="/player/:moodId"
                 element={<Player />}
