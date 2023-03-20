@@ -1,33 +1,43 @@
 import React from 'react';
 import "../styles/Player.css"
 
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_SONG, QUERY_MOOD } from '../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 
-function Player() {
+import Auth from '../utils/auth';
 
-    const { moodId } = useParams();
-    const { loading, data } = useQuery(QUERY_SONG, {
-        variables: { mood: moodId }
+function Profile() {
+
+    const { username: userParam } = useParams();
+
+    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+        variables: { username: userParam },
     });
 
-    const { loading: moodLoading, data: moodData } = useQuery(QUERY_MOOD, {
-        variables: { moodId: moodId }
-    })
-
-
-    const song = data?.song || {};
-    console.log(song.name);
-
-    const mood = moodData?.mood || {};
-    console.log(mood.name);
+    const user = data?.me || data?.user || {};
+    // navigate to personal profile page if username is yours
+    if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+        return <Navigate to="/me" />;
+    }
 
     if (loading) {
         return <div>Loading...</div>;
     }
+
+    if (!user?.username) {
+        return (
+            <h4>
+                You need to be logged in to see this. Use the navigation links above to
+                sign up or log in!
+            </h4>
+        );
+    }
+    const userSongs = user.song;
     return (
+        <div>
+{
         <div className="playerPage">
             <container className="moodBox">
                 <h1>You're Feeling: {mood.name}</h1><br></br>
@@ -43,7 +53,9 @@ function Player() {
                 </container>
             </container>
         </div>
+        }
+        </div>
     )
 }
 
-export default Player
+export default Profile

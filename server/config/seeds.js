@@ -83,8 +83,58 @@ db.once('open', async () => {
       url: "https://open.spotify.com/embed/track/3ZCTVFBt2Brf31RLEnCkWJ?utm_source=generator",
       moods: [moods[3]._id],
     },
-    
 
+    {
+      name: 'Talking to the Moon',
+      url: "https://open.spotify.com/embed/track/161DnLWsx1i3u1JT05lzqU?si=5667f66621d54be8?utm_source=generator",
+      moods: [moods[3]._id],
+    },
+
+    // Sad songs
+    {
+      name: 'Talking to the Moon',
+      url: "https://open.spotify.com/embed/track/161DnLWsx1i3u1JT05lzqU?si=5667f66621d54be8?utm_source=generator",
+      moods: [moods[1]._id],
+    },
+    {
+      name: 'Stitches',
+      url: "https://open.spotify.com/embed/track/5jsw9uXEGuKyJzs0boZ1bT?si=0f5a28c7f99444e4?utm_source=generator",
+      moods: [moods[1]._id],
+    },
+    {
+      name: 'Away from the Sun',
+      url: "https://open.spotify.com/embed/track/3THdexHRmED4euIY91Zrxc?si=96d6616918544472?utm_source=generator",
+      moods: [moods[1]._id],
+    },
+    {
+      name: 'Photograph',
+      url: "https://open.spotify.com/embed/track/3hb2ScEVkGchcAQqrPLP0R?si=61850e7779ae4a2a?utm_source=generator",
+      moods: [moods[1]._id],
+    },
+
+    // Angry songs
+    {
+      name: 'Headstrong',
+      url: "https://open.spotify.com/embed/track/1AEYT6VxrxXPMoQUxsY0E4?si=26437970ccfd4abc?utm_source=generator",
+      moods: [moods[2]._id],
+    },
+    {
+      name: 'Gives You Hell',
+      url: "https://open.spotify.com/embed/track/6ihL9TjfRjadfEePzXXyVF?si=ba475e74643146ba?utm_source=generator",
+      moods: [moods[2]._id],
+    },
+    {
+      name: 'Roar',
+      url: "https://open.spotify.com/embed/track/27tNWlhdAryQY04Gb2ZhUI?si=8a8d55238e654b9b?utm_source=generator",
+      moods: [moods[2]._id],
+    },
+    {
+      name: 'I Hate This Part',
+      url: "https://open.spotify.com/embed/track/3tSuRiNgJmMqmYR23dCqnR?si=58417ccfa53b46d4?utm_source=generator",
+      moods: [moods[2]._id],
+    },
+   
+    
   ]);
 
   console.log('songs seeded');
@@ -97,6 +147,9 @@ db.once('open', async () => {
     moods: [
       moods[0], moods[1],
     ],
+    songs: [
+      songs[0], songs[1]
+    ]
   });
   console.log('users seeded');
 
