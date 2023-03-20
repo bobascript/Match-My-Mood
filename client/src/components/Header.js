@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Header.css';
 import '../styles/Navbar.css';
-import Logo from '../assets/mcubedlogo.png'
+import Logo from '../assets/mcubedlogo.png';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
