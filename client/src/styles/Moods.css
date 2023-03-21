@@ -18,5 +18,41 @@ body {
     }
   }
 
+  @media (min-width:600px){
+  #card-one{
+    width: 300px; 
+    position: relative;
+    left: 247px;
+    bottom: -188px;
+    }
+  }
+
+  @media (min-width:600px){
+  #card-two{
+    width: 300px; 
+    position: relative;
+    left: 345px; 
+    bottom: -188px; 
+    }
+  }
+  
+  @media (min-width: 600px){
+  #card-three{
+    width: 300px; 
+    position: relative;
+    left: 445px; 
+    bottom: -188px;
+    }
+  }
+  
+  @media (min-width: 600px){
+  #card-four{
+    width: 300px; 
+    position: relative;
+    left: -1050px; 
+    bottom: -188px; 
+    }
+  }
+
 
 
