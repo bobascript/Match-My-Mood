@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN, ADD_USER } from '../utils/mutations';
+import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import '../styles/Login.css';
 import Signup from './Signup'
+import { useNavigate } from "react-router-dom";
 
 function Login(props) {
   const [formState, setFormState] = useState({ userName: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
-  const [addUser, { error: adduserError }] = useMutation(ADD_USER);
-
+  const navigate = useNavigate();
+  
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -18,33 +19,13 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const handleSignupSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const mutationResponse = await addUser({
-        variables: { userName: formState.userName, password: formState.password },
-      });
-      const token = mutationResponse.data.signup.token;
-      Auth.login(token);
+      navigate("/moods");
     } catch (e) {
       console.log(e);
     }
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  const handleSignUpChange = (event) => {
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -60,7 +41,7 @@ function Login(props) {
     <div className="col-med-6 mb-3 mb-sm-0 w-50 text-center mx-auto">
     <div className="card border-dark">
       <div className="card-body ">
-        {adduserError && <div className="alert alert-danger">{adduserError.message}</div>}
+        {error && <div className="alert alert-danger">{error.message}</div>}
         <form onSubmit={handleLoginSubmit}>
             <h5><b><label class="label">Music User Login:</label></b></h5>
             <br/>
