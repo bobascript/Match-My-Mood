@@ -30,9 +30,9 @@ function Moods() {
             {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
             <Link
             to={`/player/${moods[0]._id}`}> {/* need it to be /player/${mood._id} */}
-            <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[0].name}</b></h1></button>
+            <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[0].name}</b></h1></button>
             </Link>
-              <p className="card-text font-weight-bold"></p>
+              <p class="card-text font-weight-bold"></p>
             </div>
           </div>
         </div> 
@@ -40,15 +40,11 @@ function Moods() {
          <div class="card text-bg-dark mb-3 w-100 h-100">
           <img alt="calmpic" src={Sad} class="card-img-top" id="calm-image"/>
           <div class="card-body">
-        <div className="col">
-         <div className="card text-bg-dark mb-3 w-50 h-100">
-          <img alt="calmpic" src={Sad} className="card-img-top" id="calm-image"/>
-          <div className="card-body">
             <Link
             to={`/player/${moods[1]._id}`}>
-          <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[1].name}</b></h1></button>
+          <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[1].name}</b></h1></button>
           </Link>
-          <p className="card-text"></p>
+          <p class="card-text"></p>
          </div>
         </div>
        </div>   
@@ -56,31 +52,23 @@ function Moods() {
          <div class="card text-bg-dark mb-3 w-100 h-100">
           <img alt="sadpic" src={Angry} class="card-img-top" id="sad-image"/>
           <div class="card-body">
-       <div className="col">
-         <div className="card text-bg-dark mb-3 w-50 h-100">
-          <img alt="sadpic" src={Angry} className="card-img-top" id="sad-image"/>
-          <div className="card-body">
             <Link
             to={`/player/${moods[2]._id}`}>
-          <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[2].name}</b></h1></button>
+          <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[2].name}</b></h1></button>
           </Link>
-          <p className="card-text"></p>
+          <p class="card-text"></p>
         </div>
        </div>
       </div> 
-      <div className="col">
-        <div className="card text-bg-dark mb-3 w-50 h-100">
-         <img alt="angpic" src={Calm} className="card-img-top" id="ang-image"/>
-         <div className="card-body">
       <div class="col" id='card-four'>
         <div class="card text-bg-dark mb-3 w-100 h-100">
          <img alt="angpic" src={Calm} class="card-img-top" id="ang-image"/>
          <div class="card-body">
           <Link
           to={`/player/${moods[3]._id}`}>
-         <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[3].name}</b></h1></button>
+         <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[3].name}</b></h1></button>
          </Link>
-          <p className="card-text"></p>
+          <p class="card-text"></p>
         </div>
        </div>
       </div>   

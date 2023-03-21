@@ -14,14 +14,12 @@ function Header() {
   if (Auth.loggedIn()) {
     return(
       <div className="container-fluid-xxl">
-      <div className="container-fluid-xxl">
       <header className="header">
         <Link to={`/`}><input type="image" src={Logo} className="logo"/></Link>
         <h1>Match My Mood</h1>
   
         <div>
-        <navbar className="navbar"> 
-          <nav className="navbar-one"> 
+        <navbar className="navbar">  
           <nav className="navbar-one"> 
           <ul>
               <ol>
@@ -44,7 +42,6 @@ function Header() {
   } else {
   return (
     <div className="container-fluid-xxl">
-    <div className="container-fluid-xxl">
     <header className="header">
       <Link to={`/`}><input type="image" src={Logo} className="logo"/></Link>
       <h1>Match My Mood</h1>
@@ -52,7 +49,6 @@ function Header() {
       <div>
       {/* <div class="container"> */}
       <navbar className="navbar"> 
-        <nav className="navbar-one"> 
         <nav className="navbar-one"> 
         <ul>
             <ol>
