@@ -30,7 +30,7 @@ function Header() {
               <Link to={`/moods`}><a href="/moods"><b>Moods</b></a></Link>
               </ol>
               <ol>
-              <Link to={`/songs`}><a href="/"><b>Songs</b></a></Link>
+              <Link to={`/songs`}><a href="/"><b><i class="fa-solid fa-heart fa-lg"/></b></a></Link>
               </ol>
           </ul>
           </nav>
@@ -52,13 +52,13 @@ function Header() {
         <nav class="navbar-one"> 
         <ul>
             <ol>
-                <a href="/login"><b>Login/Sign-up</b></a>
+            <Link to={`/login`}><a href="/login"><b>Login/Sign-up</b></a></Link>
             </ol>
             <ol>
-                <a href="/moods"><b>Moods</b></a>
+            <Link to={`/moods`}><a href="/moods"><b>Moods</b></a></Link>
             </ol>
             <ol>
-                <a href="/"><b>Songs</b></a>
+            <Link to={`/songs`}><a href="/"><b><i class="fa-solid fa-heart fa-lg"/></b></a></Link>
             </ol>
         </ul>
         </nav>
