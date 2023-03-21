@@ -10,15 +10,18 @@ import Auth from '../utils/auth';
 
 function Profile() {
 
-    const { username: userParam } = useParams();
+    const { userName: userParam } = useParams();
 
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-        variables: { username: userParam },
+        variables: { userName: userParam },
+        dependencies: [userParam],
     });
 
     const user = data?.me || data?.user || {};
+    const userSongs = user.songs || [];
+    console.log(user.userName);
     // navigate to personal profile page if username is yours
-    if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    if (Auth.loggedIn() && Auth.getProfile().data.userName === userParam) {
         return <Navigate to="/me" />;
     }
 
@@ -26,7 +29,7 @@ function Profile() {
         return <div>Loading...</div>;
     }
 
-    if (!user?.username) {
+    if (!user?.userName) {
         return (
             <h4>
                 You need to be logged in to see this. Use the navigation links above to
@@ -34,13 +37,13 @@ function Profile() {
             </h4>
         );
     }
-    const userSongs = user.song;
+    
     return (
         <div>
-{userSongs.map((savedSong) => (
+{userSongs.map((song) => (
         <div className="playerPage">
             <container className="player">
-                <iframe className="spotify" src={savedSong.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+                <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
                 <container className="btnBox">
                     <button className='heartBtn'><i class="fa-solid fa-heart fa-2x"></i></button>
                     <button className='rerollBtn'><i class="fa-solid fa-shuffle fa-2x"></i></button>
