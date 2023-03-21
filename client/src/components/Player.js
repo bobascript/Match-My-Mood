@@ -2,8 +2,9 @@ import React from 'react';
 import "../styles/Player.css"
 
 import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_SONG, QUERY_MOOD } from '../utils/queries';
+import { SAVE_SONG } from '../utils/mutations';
 
 
 function Player() {
@@ -19,10 +20,27 @@ function Player() {
 
 
     const song = data?.song || {};
-    console.log(song.name);
 
     const mood = moodData?.mood || {};
-    console.log(mood.name);
+    const songId = song._id;
+    const songName = song.name;
+    const songUrl = song.url
+    const [saveSong, { error }] = useMutation(SAVE_SONG);
+
+    const handleSaveSong = async (event) => {
+        event.preventDefault();
+        console.log('songId:', songId);
+        try {
+            const { data } = await saveSong({
+                variables: { songId }
+            });
+            console.log(data);
+        } catch (err) {
+            console.error(err);
+        console.error(err.message);
+        console.error(err.graphQLErrors);
+        }
+    };
 
     if (loading) {
         return <div>Loading...</div>;
@@ -38,7 +56,7 @@ function Player() {
             <container className="player">
                 <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
                 <container className="btnBox">
-                    <button className='heartBtn'><i class="fa-solid fa-heart fa-2x"></i></button>
+                    <button className='heartBtn' onClick={handleSaveSong}><i class="fa-solid fa-heart fa-2x"></i></button>
                     <button className='rerollBtn'><i class="fa-solid fa-shuffle fa-2x"></i></button>
                 </container>
             </container>

@@ -59,13 +59,13 @@ const resolvers = {
         addSong: async (parent, { name, url }) => {
             return Songs.create({ name, url });
         },
-        saveSong: async (parent, { song }, context) => {
+        saveSong: async (parent, { songId }, context) => {
             if (context.user) {
                 return User.findOneAndUpdate(
                     { _id: context.user._id },
                     {
                         $addToSet: {
-                            songs: { songId: song._id, name: song.name, url: song.url },
+                            songs: songId,
                         },
                     },
                     {
