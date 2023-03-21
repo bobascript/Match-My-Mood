@@ -27,10 +27,10 @@ function Header() {
               <a href="/" onClick={handleLogout}><b>Log Out</b></a>
               </ol>
               <ol>
-                  <a href="/moods"><b>Moods</b></a>
+              <Link to={`/moods`}><a href="/moods"><b>Moods</b></a></Link>
               </ol>
               <ol>
-                  <a href="/"><b>Songs</b></a>
+              <Link to={`/songs`}><a href="/"><b>Songs</b></a></Link>
               </ol>
           </ul>
           </nav>
