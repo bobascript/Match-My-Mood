@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 
 
 function Header() {
+  const handleLogout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   if (Auth.loggedIn()) {
     return(
       <div class="container-fluid-xxl">
@@ -20,7 +24,7 @@ function Header() {
           <nav class="navbar-one"> 
           <ul>
               <ol>
-                  <b>Log Out</b>
+              <a href="/" onClick={handleLogout}><b>Log Out</b></a>
               </ol>
               <ol>
                   <a href="/moods"><b>Moods</b></a>
