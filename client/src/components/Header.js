@@ -19,8 +19,7 @@ function Header() {
         <h1>Match My Mood</h1>
   
         <div>
-        {/* <div class="container"> */}
-        <navbar className="navbar"> 
+        <navbar className="navbar">  
           <nav className="navbar-one"> 
           <ul>
               <ol>
@@ -31,6 +30,7 @@ function Header() {
               </ol>
               <ol>
               <Link to={`/me`}><b><i className="fa-solid fa-heart fa-lg"/></b></Link>
+              <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
               </ol>
           </ul>
           </nav>
@@ -58,6 +58,7 @@ function Header() {
             <Link to={`/moods`}><b>Moods</b></Link>
             </ol>
             <ol>
+            <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
             <Link to={`/songs`}><b><i className="fa-solid fa-heart fa-lg"/></b></Link>
             </ol>
         </ul>

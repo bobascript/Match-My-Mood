@@ -43,16 +43,16 @@ function Login(props) {
       <div className="card-body ">
         {error && <div className="alert alert-danger">{error.message}</div>}
         <form onSubmit={handleLoginSubmit}>
-            <h5><b><label class="label">Music User Login:</label></b></h5>
+            <h5><b><label className="label">Music User Login:</label></b></h5>
             <br/>
             <div className="row mb-3">
-              <label for="inputUsername3" class="col-sm-2 col-form-label">Username:</label>
+              <label for="inputUsername3" className="col-sm-2 col-form-label">Username:</label>
               <div className="col-sm-10">
-                <input name="userName" value={formState.userName} type="text" class="form-control" id="inputUsername3" onChange={handleChange}/>
+                <input name="userName" value={formState.userName} type="text" className="form-control" id="inputUsername3" onChange={handleChange}/>
               </div>
             </div>
             <div className="row mb-3">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Password:</label>
+              <label for="inputPassword3" className="col-sm-2 col-form-label">Password:</label>
               <div className="col-sm-10">
                 <input name="password" value={formState.password} type="password" className="form-control" id="inputPassword3" onChange={handleChange}/>
               </div>
