@@ -5,10 +5,10 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         users: async () => {
-            return User.find().populate('moods');
+            return User.find().populate('songs');
         },
         user: async (parent, { userName }) => {
-            return User.findOne({ userName }).populate('moods');
+            return User.findOne({ userName }).populate('songs');
         },
         moods: async () => {
             return Mood.find();
@@ -23,7 +23,7 @@ const resolvers = {
 
             const match = mood ? { mood } : {};
 
-            const allSongs = await Songs.find({moods: mood}).populate('moods');
+            const allSongs = await Songs.find({ moods: mood }).populate('moods');
             const randomNumber = Math.floor(Math.random() * allSongs.length);
             const randomSong = allSongs[randomNumber];
             return randomSong;
@@ -58,6 +58,23 @@ const resolvers = {
         },
         addSong: async (parent, { name, url }) => {
             return Songs.create({ name, url });
+        },
+        saveSong: async (parent, { song }, context) => {
+            if (context.user) {
+                return User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    {
+                        $addToSet: {
+                            songs: { songId: song._id, name: song.name, url: song.url },
+                        },
+                    },
+                    {
+                        new: true,
+                        runValidators: true,
+                    }
+                );
+            }
+            throw new AuthenticationError('You need to be logged in!');
         },
         updateUserMood: async (parent, { userId, name }) => {
             return await User.findOneAndUpdate(
