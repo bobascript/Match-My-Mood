@@ -55,7 +55,7 @@ function Login(props) {
     return (
     <div>
 
-    <div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"03%", margin:"0%", alignItems:"center"}}></div>
+    <div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"01%", margin:"0%", alignItems:"center"}}></div>
     <div className="row ">
     <div className="col-med-6 mb-3 mb-sm-0 w-50 text-center mx-auto">
     <div className="card border-dark">

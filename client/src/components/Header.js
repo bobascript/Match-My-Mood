@@ -19,16 +19,13 @@ function Header() {
         <nav class="navbar-one"> 
         <ul>
             <ol>
-                <a href="#login"><b>Login</b></a>
+                <a href="/login"><b>Login/Sign-up</b></a>
             </ol>
             <ol>
-                <a href="#login"><b>Sign up</b></a>
+                <a href="/moods"><b>Moods</b></a>
             </ol>
             <ol>
-                <a href="#moods"><b>Moods</b></a>
-            </ol>
-            <ol>
-                <a href="#player"><b>Songs</b></a>
+                <a href="/"><b>Songs</b></a>
             </ol>
         </ul>
         </nav>
