@@ -19,13 +19,15 @@ function Moods() {
   }
     return (
     <div>
-     <div style={{display:"flex",flex:"column", justifyContent:"center", width:"114%",height:"105%", padding:"8%", alignItems:"center"}}>
-     <div className="row row-cols-1 row-cols-sm-4 g-1 text-center">
-  
-        <div className="col">
-          <div className="card text-bg-dark mb-3 w-50 h-100 center">
-            <img alt="happypic" src={Happy} className="card-img-top" id="happy-image"/>
-            <div className="card-body">
+    <div class="container">
+     <div style={{display:"flex",flex:"column", justifyContent:"center", justifyContent:"space-evenly", width:"100%",height:"100%", padding:"%", margin:"", alignItems:"center"}}>
+     <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+        
+        <div class="col" id='card-one'>
+          <div class="card text-bg-dark mb-3 w-100 h-100 text-center">
+            <img alt="happypic" src={Happy} class="card-img-top" id="happy-image"/>
+            <div class="card-body">
+            {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
             <Link
             to={`/player/${moods[0]._id}`}> {/* need it to be /player/${mood._id} */}
             <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[0].name}</b></h1></button>
@@ -34,6 +36,10 @@ function Moods() {
             </div>
           </div>
         </div> 
+        <div class="col" id='card-two'>
+         <div class="card text-bg-dark mb-3 w-100 h-100">
+          <img alt="calmpic" src={Sad} class="card-img-top" id="calm-image"/>
+          <div class="card-body">
         <div className="col">
          <div className="card text-bg-dark mb-3 w-50 h-100">
           <img alt="calmpic" src={Sad} className="card-img-top" id="calm-image"/>
@@ -46,6 +52,10 @@ function Moods() {
          </div>
         </div>
        </div>   
+       <div class="col" id='card-three'>
+         <div class="card text-bg-dark mb-3 w-100 h-100">
+          <img alt="sadpic" src={Angry} class="card-img-top" id="sad-image"/>
+          <div class="card-body">
        <div className="col">
          <div className="card text-bg-dark mb-3 w-50 h-100">
           <img alt="sadpic" src={Angry} className="card-img-top" id="sad-image"/>
@@ -62,6 +72,10 @@ function Moods() {
         <div className="card text-bg-dark mb-3 w-50 h-100">
          <img alt="angpic" src={Calm} className="card-img-top" id="ang-image"/>
          <div className="card-body">
+      <div class="col" id='card-four'>
+        <div class="card text-bg-dark mb-3 w-100 h-100">
+         <img alt="angpic" src={Calm} class="card-img-top" id="ang-image"/>
+         <div class="card-body">
           <Link
           to={`/player/${moods[3]._id}`}>
          <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[3].name}</b></h1></button>
@@ -71,9 +85,11 @@ function Moods() {
        </div>
       </div>   
     </div> 
+    </div> 
 
    </div>
-   </div>      
+   
+</div>      
          
     );
 }

@@ -20,6 +20,7 @@ import Login from './components/Login.js';
 import Player from './components/Player.js'
 import Footer from './components/Footer.js';
 import Moods from './components/Moods';
+import Profile from './components/Profile';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -72,6 +73,10 @@ function App() {
               <Route 
                 path="/moods"
                 element={<Moods />}
+              />
+              <Route 
+                path="/me" 
+                element={<Profile />}
               />
             </Routes>
           </div>

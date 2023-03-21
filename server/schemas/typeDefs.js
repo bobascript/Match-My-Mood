@@ -33,6 +33,7 @@ const typeDefs = gql`
     song(mood: ID!): Songs
     user(userName: String!): User
     users: [User]
+    me: User
   }
 
   type Mutation {

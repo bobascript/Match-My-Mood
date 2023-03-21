@@ -14,21 +14,24 @@ function Header() {
   if (Auth.loggedIn()) {
     return(
       <div className="container-fluid-xxl">
+      <div className="container-fluid-xxl">
       <header className="header">
-        <Link to={`/`}><input href="#" type="image" src={Logo} className="logo"/></Link>
+        <Link to={`/`}><input type="image" src={Logo} className="logo"/></Link>
         <h1>Match My Mood</h1>
   
         <div>
         <navbar className="navbar"> 
+          <nav className="navbar-one"> 
           <nav className="navbar-one"> 
           <ul>
               <ol>
               <a href="/" onClick={handleLogout}><b>Log Out</b></a>
               </ol>
               <ol>
-              <Link to={`/moods`}><a href="/moods"><b>Moods</b></a></Link>
+              <Link to={`/moods`}><b>Moods</b></Link>
               </ol>
               <ol>
+              <Link to={`/me`}><b><i className="fa-solid fa-heart fa-lg"/></b></Link>
               <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
               </ol>
           </ul>
@@ -41,23 +44,26 @@ function Header() {
   } else {
   return (
     <div className="container-fluid-xxl">
+    <div className="container-fluid-xxl">
     <header className="header">
-      <Link to={`/`}><input href="#" type="image" src={Logo} className="logo"/></Link>
+      <Link to={`/`}><input type="image" src={Logo} className="logo"/></Link>
       <h1>Match My Mood</h1>
 
       <div>
       {/* <div class="container"> */}
       <navbar className="navbar"> 
         <nav className="navbar-one"> 
+        <nav className="navbar-one"> 
         <ul>
             <ol>
-            <Link to={`/login`}><a href="/login"><b>Login/Sign-up</b></a></Link>
+            <Link to={`/login`}><b>Login/Sign-up</b></Link>
             </ol>
             <ol>
-            <Link to={`/moods`}><a href="/moods"><b>Moods</b></a></Link>
+            <Link to={`/moods`}><b>Moods</b></Link>
             </ol>
             <ol>
             <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
+            <Link to={`/songs`}><b><i className="fa-solid fa-heart fa-lg"/></b></Link>
             </ol>
         </ul>
         </nav>
