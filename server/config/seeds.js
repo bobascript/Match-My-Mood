@@ -143,7 +143,6 @@ db.once('open', async () => {
 
   await User.create({
     userName: 'testUser',
-    email: 'test@test.com',
     password: 'abcd1234',
     moods: [
       moods[0], moods[1],
