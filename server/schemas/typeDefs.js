@@ -42,7 +42,7 @@ const typeDefs = gql`
     updateUserMood(name: String): User
     addMood(name: String!): Mood
     addSong(name: String!, url: String!): Songs
-    saveSong(songId: ID!): User
+    saveSong(songId: ID!, name: String!, url: String!): Songs
   }
 `;
 
