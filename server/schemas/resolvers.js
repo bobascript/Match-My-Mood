@@ -27,7 +27,13 @@ const resolvers = {
             const randomNumber = Math.floor(Math.random() * allSongs.length);
             const randomSong = allSongs[randomNumber];
             return randomSong;
-        }
+        },
+        me: async (parent, args, context) => {
+            if(context.user) {
+                return User.findOne({ _id: context.user._id }).populate('songs');
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
     },
 
     Mutation: {

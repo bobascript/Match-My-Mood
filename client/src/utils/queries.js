@@ -5,9 +5,10 @@ export const QUERY_USER = gql`
   user(userName: $userName) {
     _id
     userName
-    moods {
+    songs {
       _id
       name
+      url
     }
   }
 }
@@ -46,4 +47,18 @@ export const QUERY_SONG = gql`
     }
   }
 }
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      userName
+      songs {
+        _id
+        name
+        url
+      }
+    }
+  }
 `;
