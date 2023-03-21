@@ -19,11 +19,12 @@ function Moods() {
   }
     return (
     <div>
-     <div style={{display:"flex",flex:"column", justifyContent:"center", width:"114%",height:"105%", padding:"8%", alignItems:"center"}}>
-     <div class="row row-cols-1 row-cols-sm-4 g-1 text-center">
-  
-        <div class="col">
-          <div class="card text-bg-dark mb-3 w-50 h-100 center">
+    <div class="container">
+     <div style={{display:"flex",flex:"column", justifyContent:"center", justifyContent:"space-evenly", width:"100%",height:"100%", padding:"%", margin:"", alignItems:"center"}}>
+     <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+        
+        <div class="col" id='card-one'>
+          <div class="card text-bg-dark mb-3 w-100 h-100 text-center">
             <img alt="happypic" src={Happy} class="card-img-top" id="happy-image"/>
             <div class="card-body">
             {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
@@ -35,8 +36,8 @@ function Moods() {
             </div>
           </div>
         </div> 
-        <div class="col">
-         <div class="card text-bg-dark mb-3 w-50 h-100">
+        <div class="col" id='card-two'>
+         <div class="card text-bg-dark mb-3 w-100 h-100">
           <img alt="calmpic" src={Sad} class="card-img-top" id="calm-image"/>
           <div class="card-body">
             <Link
@@ -47,8 +48,8 @@ function Moods() {
          </div>
         </div>
        </div>   
-       <div class="col">
-         <div class="card text-bg-dark mb-3 w-50 h-100">
+       <div class="col" id='card-three'>
+         <div class="card text-bg-dark mb-3 w-100 h-100">
           <img alt="sadpic" src={Angry} class="card-img-top" id="sad-image"/>
           <div class="card-body">
             <Link
@@ -59,8 +60,8 @@ function Moods() {
         </div>
        </div>
       </div> 
-      <div class="col">
-        <div class="card text-bg-dark mb-3 w-50 h-100">
+      <div class="col" id='card-four'>
+        <div class="card text-bg-dark mb-3 w-100 h-100">
          <img alt="angpic" src={Calm} class="card-img-top" id="ang-image"/>
          <div class="card-body">
           <Link
@@ -72,9 +73,11 @@ function Moods() {
        </div>
       </div>   
     </div> 
+    </div> 
 
    </div>
-   </div>      
+   
+</div>      
          
     );
 }
