@@ -56,3 +56,21 @@ export const ADD_SONG = gql`
     }
   }
 `;
+
+export const SAVE_SONG = gql`
+  mutation saveSong(
+    $songId: ID!
+    $name: String!
+    $url: String!
+  ) {
+    addSong(
+      songId: $songId
+      name: $name
+      url: $url
+    ) {
+      id
+      name
+      url
+    }
+  }
+`;
