@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN, ADD_USER } from '../utils/mutations';
+import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import '../styles/Login.css';
 
@@ -14,7 +14,7 @@ function Signup(props) {
       const mutationResponse = await addUser({
         variables: { userName: formState.userName, password: formState.password },
       });
-      const token = mutationResponse.data.signup.token;
+      const token = mutationResponse.data.addUser.token;
       Auth.login(token);
     } catch (e) {
       console.log(e);
