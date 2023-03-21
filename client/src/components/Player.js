@@ -56,8 +56,8 @@ function Player() {
             <container className="player">
                 <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
                 <container className="btnBox">
-                    <button className='heartBtn' onClick={handleSaveSong}><i class="fa-solid fa-heart fa-2x"></i></button>
-                    <button className='rerollBtn'><i class="fa-solid fa-shuffle fa-2x"></i></button>
+                    <button className='heartBtn' onClick={handleSaveSong}><i className="fa-solid fa-heart fa-2x"></i></button>
+                    <button className='rerollBtn'><i className="fa-solid fa-shuffle fa-2x"></i></button>
                 </container>
             </container>
         </div>

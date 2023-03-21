@@ -37,12 +37,12 @@ function Signup(props) {
         <div className="card-body">
           {adduserError && <div className="alert alert-danger">{adduserError.message}</div>}
           <form onSubmit={handleSignupSubmit}>
-            <h5><b><label class="label">Sign up for New Music User:</label></b></h5>
+            <h5><b><label className="label">Sign up for New Music User:</label></b></h5>
             <br />
             <div className="row mb-3">
-              <label for="inputUsername4" class="col-sm-2 col-form-label">Username:</label>
+              <label for="inputUsername4" className="col-sm-2 col-form-label">Username:</label>
               <div className="col-sm-10">
-                <input name="userName" value={formState.userName} type="text" class="form-control" id="inputUsername4" onChange={handleChange} />
+                <input name="userName" value={formState.userName} type="text" className="form-control" id="inputUsername4" onChange={handleChange} />
               </div>
             </div>
             <div className="row mb-3">

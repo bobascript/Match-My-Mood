@@ -20,54 +20,53 @@ function Moods() {
     return (
     <div>
      <div style={{display:"flex",flex:"column", justifyContent:"center", width:"114%",height:"105%", padding:"8%", alignItems:"center"}}>
-     <div class="row row-cols-1 row-cols-sm-4 g-1 text-center">
+     <div className="row row-cols-1 row-cols-sm-4 g-1 text-center">
   
-        <div class="col">
-          <div class="card text-bg-dark mb-3 w-50 h-100 center">
-            <img alt="happypic" src={Happy} class="card-img-top" id="happy-image"/>
-            <div class="card-body">
-            {/* <button><b> <h1 class="card-title text-bg-dark">HAPPY</h1></b></button> */}
+        <div className="col">
+          <div className="card text-bg-dark mb-3 w-50 h-100 center">
+            <img alt="happypic" src={Happy} className="card-img-top" id="happy-image"/>
+            <div className="card-body">
             <Link
             to={`/player/${moods[0]._id}`}> {/* need it to be /player/${mood._id} */}
-            <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[0].name}</b></h1></button>
+            <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[0].name}</b></h1></button>
             </Link>
-              <p class="card-text font-weight-bold"></p>
+              <p className="card-text font-weight-bold"></p>
             </div>
           </div>
         </div> 
-        <div class="col">
-         <div class="card text-bg-dark mb-3 w-50 h-100">
-          <img alt="calmpic" src={Sad} class="card-img-top" id="calm-image"/>
-          <div class="card-body">
+        <div className="col">
+         <div className="card text-bg-dark mb-3 w-50 h-100">
+          <img alt="calmpic" src={Sad} className="card-img-top" id="calm-image"/>
+          <div className="card-body">
             <Link
             to={`/player/${moods[1]._id}`}>
-          <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[1].name}</b></h1></button>
+          <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[1].name}</b></h1></button>
           </Link>
-          <p class="card-text"></p>
+          <p className="card-text"></p>
          </div>
         </div>
        </div>   
-       <div class="col">
-         <div class="card text-bg-dark mb-3 w-50 h-100">
-          <img alt="sadpic" src={Angry} class="card-img-top" id="sad-image"/>
-          <div class="card-body">
+       <div className="col">
+         <div className="card text-bg-dark mb-3 w-50 h-100">
+          <img alt="sadpic" src={Angry} className="card-img-top" id="sad-image"/>
+          <div className="card-body">
             <Link
             to={`/player/${moods[2]._id}`}>
-          <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[2].name}</b></h1></button>
+          <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[2].name}</b></h1></button>
           </Link>
-          <p class="card-text"></p>
+          <p className="card-text"></p>
         </div>
        </div>
       </div> 
-      <div class="col">
-        <div class="card text-bg-dark mb-3 w-50 h-100">
-         <img alt="angpic" src={Calm} class="card-img-top" id="ang-image"/>
-         <div class="card-body">
+      <div className="col">
+        <div className="card text-bg-dark mb-3 w-50 h-100">
+         <img alt="angpic" src={Calm} className="card-img-top" id="ang-image"/>
+         <div className="card-body">
           <Link
           to={`/player/${moods[3]._id}`}>
-         <button type="button" class="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[3].name}</b></h1></button>
+         <button type="button" className="btn btn-outline-success btn-sm btn-block"><h1><b>{moods[3].name}</b></h1></button>
          </Link>
-          <p class="card-text"></p>
+          <p className="card-text"></p>
         </div>
        </div>
       </div>   
