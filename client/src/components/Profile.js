@@ -37,20 +37,31 @@ function Profile() {
             </h4>
         );
     }
-    
+
+    const containerStyle = {
+        paddingTop: "20px",
+        paddingBottom: "120px"
+    }
+
+    const playerStyle = {
+        paddingTop: "5px",
+    }
+
     return (
         <div>
-{userSongs.map((song) => (
-        <div className="playerPage">
-            <container className="player">
-                <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
-                <container className="btnBox">
-                    <button className='heartBtn'><i className="fa-solid fa-heart fa-2x"></i></button>
-                    <button className='rerollBtn'><i className="fa-solid fa-shuffle fa-2x"></i></button>
-                </container>
-            </container>
-        </div>
-        ))}
+            <div className="container" style={containerStyle}>
+                <div className="row row-cols-1 row-cols-md-2 justify-content-center align-items-center mx-auto">
+                    {userSongs.map((song) => (
+                        <div className="col mb-4">
+                            <div className="playerPage">
+                                <div className="container" style={playerStyle}>
+                                    <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
