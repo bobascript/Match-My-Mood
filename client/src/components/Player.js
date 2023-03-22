@@ -1,6 +1,5 @@
 import React from 'react';
 import "../styles/Player.css"
-
 import { useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_SONG, QUERY_MOOD } from '../utils/queries';
@@ -8,19 +7,14 @@ import { SAVE_SONG } from '../utils/mutations';
 
 
 function Player() {
-
     const { moodId } = useParams();
-    const { loading, data } = useQuery(QUERY_SONG, {
+    const { loading, data, refetch } = useQuery(QUERY_SONG, {
         variables: { mood: moodId }
     });
-
     const { loading: moodLoading, data: moodData } = useQuery(QUERY_MOOD, {
         variables: { moodId: moodId }
     })
-
-
     const song = data?.song || {};
-
     const mood = moodData?.mood || {};
     const songId = song._id;
     const songName = song.name;
@@ -44,6 +38,13 @@ function Player() {
         }
     };
 
+    const handleReRollSong = async () => {
+      try {
+        await refetch();
+      } catch (err) {
+        console.error('Error rerolling song', err);
+      }
+    };
 
     if (loading) {
         return <div>Loading...</div>;
@@ -60,7 +61,7 @@ function Player() {
                 <iframe className="spotify" src={songUrl} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
                 <div className="btnBox">
                     <button className='heartBtn' onClick={handleSaveSong}><i className="fa-solid fa-heart fa-2x"></i></button>
-                    <button className='rerollBtn' ><i className="fa-solid fa-shuffle fa-2x"></i></button>
+                    <button className='rerollBtn' onClick={handleReRollSong}><i className="fa-solid fa-shuffle fa-2x"></i></button>
                 </div>
             </div>
         </div>
