@@ -4,13 +4,10 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import '../styles/Login.css';
 import Signup from './Signup'
-import { useNavigate } from "react-router-dom";
 
 function Login(props) {
   const [formState, setFormState] = useState({ userName: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
-  const navigate = useNavigate();
-  
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -19,7 +16,6 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
-      navigate("/moods");
     } catch (e) {
       console.log(e);
     }
