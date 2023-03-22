@@ -76,7 +76,6 @@ function Moods() {
     </div> 
 
    </div>
-   
 </div>      
          
     );

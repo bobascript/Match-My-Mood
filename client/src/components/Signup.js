@@ -30,11 +30,11 @@ function Signup(props) {
   };
   return (
     <div>
-<div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"0", margin: "03%", alignItems:"center"}}></div>
+<div style={{display:"flex",flex:"column", justifyContent:"center",width:"100%",height:"100%", padding:"0", margin: "1%", alignItems:"center"}}></div>
 <div className="row"/>
     <div className="col-med-6 mb-3 mb-sm-0 w-50 text-center mx-auto">
       <div className="card border-dark">
-        <div className="card-body">
+        <div className="card-body" id="cardsignup">
           {adduserError && <div className="alert alert-danger">{adduserError.message}</div>}
           <form onSubmit={handleSignupSubmit}>
             <h5><b><label className="label">Sign up for New Music User:</label></b></h5>

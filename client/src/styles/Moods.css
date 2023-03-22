@@ -5,6 +5,10 @@ body {
     height: 100vh;
   }
 
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
 
   @keyframes gradient {
     0% {
@@ -20,12 +24,11 @@ body {
 
 
   #card-one{
-    width: 300px; 
+    width: 310px; 
     height: 300px;
     display: inline;
     position: relative;
-    /*left: 247px;*/
-    bottom: -225px;
+    bottom: -135px;
     padding: 25px;
     margin: 0px;
     }
@@ -33,22 +36,39 @@ body {
 
   .btn{
     display: inline-block;
-    display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    margin: 55px;
+    margin: 40px;
     margin-top: -10px;
     padding: -10px;
     border:none;
-    height: 35px;
-    width: 100px;
+    height: 45px;
+    width: 140px;
    
   } 
 
   .btn {
     text-align: center;
   }
+
+  /* #button {
+    width: min-content;
+  } */
+
+  /* @media screen and (max-width:992px) {
+    #button {
+      width: auto;
+    }
+  } */
+
+    /* .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    } */
 
  
   /* #card-two{
@@ -83,8 +103,8 @@ body {
 
   @media screen and (max-width:500px) {
     #card-one {
-      width:50%;
-      height:100px;
+      width:80%;
+      height:370px;
     }
   }
 
