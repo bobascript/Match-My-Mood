@@ -51,7 +51,7 @@ function Header() {
         <nav className="navbar-one"> 
         <ul>
             <ol>
-            <Link to={`/login`}><b>Login/Sign-up</b></Link>
+            <Link to={`/login`}><b>Login/Sign up</b></Link>
             </ol>
             <ol>
             <Link to={`/moods`}><b>Moods</b></Link>
