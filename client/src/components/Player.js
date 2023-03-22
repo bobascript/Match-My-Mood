@@ -25,7 +25,9 @@ function Player() {
     const songId = song._id;
     const songName = song.name;
     const songUrl = song.url
-    const [saveSong, { error }] = useMutation(SAVE_SONG);
+    const [saveSong, { error }] = useMutation(SAVE_SONG, {
+      fetchPolicy: 'no-cache'
+    });
 
     const handleSaveSong = async (event) => {
         event.preventDefault();
@@ -42,24 +44,25 @@ function Player() {
         }
     };
 
+
     if (loading) {
         return <div>Loading...</div>;
     }
     return (
         <div className="playerPage">
-            <container className="moodBox">
+            <div className="moodBox">
                 <h1>You're Feeling: {mood.name}</h1><br></br>
                 <h3 style={{ textDecoration: "underline" }}>This is your mood</h3><br></br>
                 <p>{mood.description}</p>
-            </container>
+            </div>
 
-            <container className="player">
-                <iframe className="spotify" src={song.url} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
-                <container className="btnBox">
+            <div className="player">
+                <iframe className="spotify" src={songUrl} allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+                <div className="btnBox">
                     <button className='heartBtn' onClick={handleSaveSong}><i className="fa-solid fa-heart fa-2x"></i></button>
-                    <button className='rerollBtn'><i className="fa-solid fa-shuffle fa-2x"></i></button>
-                </container>
-            </container>
+                    <button className='rerollBtn' ><i className="fa-solid fa-shuffle fa-2x"></i></button>
+                </div>
+            </div>
         </div>
     )
 }
