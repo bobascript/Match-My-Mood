@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "../styles/Player.css"
 import { useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_SONG, QUERY_MOOD } from '../utils/queries';
+import { QUERY_SONG, QUERY_MOOD, QUERY_ME } from '../utils/queries';
 import { SAVE_SONG } from '../utils/mutations';
 
 
@@ -21,7 +21,8 @@ function Player() {
     const songName = song.name;
     const songUrl = song.url
     const [saveSong, { error }] = useMutation(SAVE_SONG, {
-      fetchPolicy: 'no-cache'
+      fetchPolicy: 'no-cache',
+      refetchQueries: [{ query: QUERY_ME }],
     });
 
     const handleSaveSong = async (event) => {

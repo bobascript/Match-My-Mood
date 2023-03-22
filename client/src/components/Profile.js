@@ -20,6 +20,7 @@ function Profile() {
     const user = data?.me || data?.user || {};
     const userSongs = user.songs || [];
     console.log(user.userName);
+    
     // navigate to personal profile page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data.userName === userParam) {
         return <Navigate to="/me" />;
