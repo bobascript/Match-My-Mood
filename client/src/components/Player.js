@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../styles/Player.css"
 import { useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
@@ -14,6 +14,7 @@ function Player() {
     const { loading: moodLoading, data: moodData } = useQuery(QUERY_MOOD, {
         variables: { moodId: moodId }
     })
+    const [isSaved, setIsSaved] = useState(false);
     const song = data?.song || {};
     const mood = moodData?.mood || {};
     const songId = song._id;
@@ -31,6 +32,10 @@ function Player() {
                 variables: { songId }
             });
             console.log(data);
+            setIsSaved(true);
+            setTimeout(() => {
+              setIsSaved(false);
+          }, 2500);
         } catch (err) {
             console.error(err);
         console.error(err.message);
@@ -63,6 +68,7 @@ function Player() {
                     <button className='heartBtn' onClick={handleSaveSong}><i className="fa-solid fa-heart fa-2x"></i></button>
                     <button className='rerollBtn' onClick={handleReRollSong}><i className="fa-solid fa-shuffle fa-2x"></i></button>
                 </div>
+                {isSaved && <p className="saved-message">Song is saved!</p>}
             </div>
         </div>
     )
