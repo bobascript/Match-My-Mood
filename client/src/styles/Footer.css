@@ -36,3 +36,9 @@ a{
 a:hover{
     color: white;
 }
+
+@media screen and (max-width: 600px) {
+  .footer ul li {
+      padding-left: 20px; /* Adjust the padding to fit the icons on smaller screens */
+  }
+}
