@@ -29,7 +29,7 @@ function Header() {
               <Link to={`/moods`}><b>Moods</b></Link>
               </ol>
               <ol>
-              <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
+              <Link to={`/me`}><b><i className="fa-solid fa-heart fa-lg"/></b></Link>
               </ol>
           </ul>
           </nav>
@@ -52,12 +52,6 @@ function Header() {
         <ul>
             <ol>
             <Link to={`/login`}><b>Login/Sign up</b></Link>
-            </ol>
-            <ol>
-            <Link to={`/moods`}><b>Moods</b></Link>
-            </ol>
-            <ol>
-            <Link to={`/songs`}><a href="/"><b><i className="fa-solid fa-heart fa-lg"/></b></a></Link>
             </ol>
         </ul>
         </nav>
