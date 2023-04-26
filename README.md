@@ -24,7 +24,7 @@ the dislike option will show a new song. Then, there will be another web page vi
 their saved songs.
 
 ## Screenshot of Application
-![Match My Mood](https://user-images.githubusercontent.com/113862182/227024925-a38db7e9-6e1f-4536-90d9-67d8b206e475.png)
+![Match My Mood](https://user-images.githubusercontent.com/113862182/226769747-9928403c-5473-4494-9b3d-0e0aaa79ca64.png)
 
 ![Match My Mood](https://user-images.githubusercontent.com/113862182/226769791-bf61ac5d-d51e-426a-9957-476ed79731be.png)
 
@@ -71,7 +71,6 @@ THEN I can view saved songs
 
 ## Acknowledgment
 I would like to thank the professor, TAs, and others who provided their helpful guidance and assistance.
-
 
 
 
